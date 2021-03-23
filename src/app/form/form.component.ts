@@ -16,7 +16,8 @@ export class FormComponent implements OnInit {
  
     lastName: new FormControl('',Validators.required),
  
-    email:new FormControl('',Validators.required),
+
+    email:new FormControl('',Validators.email),
     
     message: new FormControl('',Validators.required)
  
