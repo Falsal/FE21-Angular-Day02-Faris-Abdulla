@@ -1,0 +1,30 @@
+<!-- <h1> Contact us </h1> -->
+
+<form [formGroup]="info" (ngSubmit)="onSubmit()">
+
+    <label>
+      First Name:
+      <input type="text" formControlName="firstName">
+    </label>
+  
+   
+  
+    <label>
+      Last Name:
+      <input type="text" formControlName="lastName">
+    </label>
+
+ 
+    <label>
+      Email:
+      <input type="text" formControlName="email">
+    </label>
+
+    <label>
+      Message:
+      <input type="text" formControlName="message">
+    </label>
+
+    <input type="submit" class="btn btn-primary" value="send message">
+ 
+</form>
