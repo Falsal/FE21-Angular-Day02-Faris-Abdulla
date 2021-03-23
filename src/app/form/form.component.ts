@@ -12,7 +12,7 @@ export class FormComponent implements OnInit {
 
   info = new FormGroup({
 
-    firstName: new FormControl('',Validators.min(4)),
+    firstName: new FormControl('',Validators.minLength(4)),
  
     lastName: new FormControl('',Validators.required),
  
