@@ -12,7 +12,7 @@ export class FormComponent implements OnInit {
 
   info = new FormGroup({
 
-    firstName: new FormControl('',Validators.required),
+    firstName: new FormControl('',Validators.min(4)),
  
     lastName: new FormControl('',Validators.required),
  
@@ -26,13 +26,12 @@ export class FormComponent implements OnInit {
   constructor() { }
 
   onSubmit(){
-
     if(this.info.valid){
       var a = this.info.value;
       console.log(a)
-   }
-
+   } else alert('check your input again')
   }
+
 
   ngOnInit(): void {
   }

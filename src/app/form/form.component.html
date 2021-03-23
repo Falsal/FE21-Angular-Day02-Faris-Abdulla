@@ -1,27 +1,32 @@
-<!-- <h1> Contact us </h1> -->
+<div class="container my-4">
+  <div>Contact us</div>
 
-<form [formGroup]="info" (ngSubmit)="onSubmit()">
+
+<form class="col-4" [formGroup]="info" (ngSubmit)="onSubmit()">
 
     <label>
       First Name:
-      <input type="text" formControlName="firstName">
+      <input class="form-control my-2" type="text" formControlName="firstName">
     </label>
   
     <label>
       Last Name:
-      <input type="text" formControlName="lastName">
+      <input class="form-control my-2" type="text" formControlName="lastName">
     </label>
 
     <label>
       Email:
-      <input type="text" formControlName="email">
+      <input class="form-control my-2" type="text" formControlName="email">
     </label>
 
     <label>
       Message:
-      <input type="text" formControlName="message">
+      <input class="form-control my-2" type="text" formControlName="message">
     </label>
-
-    <input type="submit" class="btn btn-primary" value="send message">
+    
+    <div>
+      <input class="form-control my-2" type="submit" class="btn btn-primary" value="send message">
+    </div>
  
 </form>
+</div>

@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { ListComponent } from './list/list.component';
 import { FormComponent } from './form/form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AddcarComponent } from './addcar/addcar.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     NavbarComponent,
     HomeComponent,
     ListComponent,
-    FormComponent
+    FormComponent,
+    AddcarComponent
   ],
   imports: [
     BrowserModule,
