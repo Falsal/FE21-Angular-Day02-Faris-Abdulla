@@ -1,5 +1,5 @@
 <!-- <p>form works!</p> -->
-
+<!-- 
 <form [formGroup]="info" (ngSubmit)="onSubmit()">
 
     <label>
@@ -47,3 +47,38 @@
    
   
    </form>
+ -->
+
+<div class="container">
+  <h1>Contact Us:</h1>
+  <form [formGroup]="info" (ngSubmit)="onSubmit()">
+    <div class="form-outline form-group mb-6">
+      <input type="text" id="form4Example1" formControlName="firstName" class="form-control" />
+      <label class="form-label" for="form4Example1">FirstName</label>
+    </div>
+  
+    <!-- Email input -->
+    <div class="form-outline form-group mb-6">
+      <input type="email" id="form4Example2" formControlName="lastName"class="form-control" />
+      <label class="form-label" for="form4Example2">lastName</label>
+    </div>
+
+   <div class="form-outline form-group mb-6">
+      <input type="email" id="form4Example2" formControlName="email"class="form-control" />
+      <label class="form-label" for="form4Example2">Email</label>
+    </div>
+    <!-- Message input -->
+    <div class="form-outline form-group mb-6">
+      <textarea class="form-control" formControlName="message" id="form4Example3" rows="4"></textarea>
+      <label class="form-label" for="form4Example3">Message</label>
+    </div>
+
+    
+  
+    <!-- Checkbox -->
+  
+    <!-- Submit button -->
+    <input type="submit" class="btn btn-primary" value="Send Message">
+  </form>
+</div>
+   

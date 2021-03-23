@@ -1,0 +1,10 @@
+.active {
+
+    /* background-color: yellow; */
+    text-align: center;
+    width: 200px;
+  
+  }
+  .checked {
+    color: orange;
+  }

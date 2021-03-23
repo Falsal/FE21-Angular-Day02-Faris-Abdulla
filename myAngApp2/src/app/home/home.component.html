@@ -1,1 +1,55 @@
-<h1>home works</h1>
+
+<h1>Our cars</h1>
+<p>We have very nice cars here.</p>
+
+<div class="d-flex flex-wrap">
+    <!-- here comes output of array cars -->
+    <div *ngFor="let car of cars">
+        <div class="card m-2" style="width: 18rem;">
+            <img src="{{car.img}}"
+                alt="" class="card-img-top">
+            <p class="h5 card-title text-center">{{car.brand}}</p>
+            <p class="card-text text-center">{{car.type}}</p>
+            <p class="small text-center">{{car.PS}} PS</p>
+            <p class="card-text text-center">{{car.price}} €/day*</p>
+            <button class="btn btn-primary">rent</button>
+        </div>
+    </div>
+</div>
+<div class="small text-center">*excl. insurance and taxes</div>
+
+<hr>
+<!-- with click on button- the div#staffOnly opens -->
+<button (click)="openStaffArea()" class="btn btn-light mb-4">Add new Car</button>
+
+<div id="staffOnly" class="d-none m-5">
+    <h2 class="h4">For staff only:</h2>
+    <form [formGroup]="addCarInSore" (ngSubmit)="onAdd()">
+
+        
+        <div class="row">
+            <label for="image" class="col-2">image:</label>
+            <input id="brand" type="text" formControlName="img" class="col-4"  placeholder="stored Picture or url link">
+        </div>
+        
+        <div class="row">
+            <label for="brand" class="col-2">Brand:</label>
+            <input id="brand" type="text" formControlName="brand" class="col-4"  placeholder="min 2 letters">
+        </div>
+        <div class="row">
+            <label for="type" class="col-2">Type:</label>
+            <input id="type" type="text" formControlName="type" class="col-4">
+        </div>
+        <div class="row">
+            <label for="ps" class="col-2">PS:</label>
+            <input id="ps" type="text" formControlName="PS" class="col-2">
+        </div>
+        <div class="row">
+            <label for="price" class="col-2">Price per day:</label>
+            <input id="price" type="text" formControlName="price" class="col-4">
+        </div>
+
+        <input type="submit" class="btn btn-primary" value="Submit">
+
+    </form>
+</div>

@@ -15,9 +15,11 @@ export class FormComponent implements OnInit {
 
    lastName: new FormControl('',Validators.required),
 
-   age: new FormControl('',Validators.required),
+    email:new FormControl('',Validators.required),
 
-   email:new FormControl('',Validators.required)
+   message: new FormControl('',Validators.required)
+
+   
 
  });
 
@@ -38,7 +40,7 @@ export class FormComponent implements OnInit {
 
       var a = this.info.value;
 
-      console.log(a)
+      console.table(a)
 
    }
 
