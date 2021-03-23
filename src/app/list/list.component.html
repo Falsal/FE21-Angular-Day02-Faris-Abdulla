@@ -9,18 +9,17 @@
         </div>
 
         <div class="row mb-4" id="location">
-            <div *ngFor="let car of carList" class="col-lg-3 col-md-6 col-sm-1 px-1 box-height mb-2 mb-lg-0 al shadow-sm p-3 mb-5 bg-body rounded">
-                  
-                    <p class=" text-center px-2 h4"> Brand: {{car.carName}}  </p>
-                    
+            <!-- the *ngFor loop, desuignation can be [ngFor] but with side effects , evrything inside the div will be looped over-->
+            <div *ngFor="let car of carList" class="col-lg-3 col-md-6 col-sm-1 px-1 box-height mb-2 mb-lg-0 al shadow-sm p-3 mb-5 bg-body rounded"> 
+                    <p class=" text-center px-2 h4 "> Brand: {{car.carName}}  </p>  
                     <img class="rounded mx-auto w-75 p-3 d-md-flex image-fluid" src="{{car.image}}" alt="image 1">
                     
                     <div class="col text-center ">
                         <p class="text-center"> Price: €{{car.price}}  </p>
                         <p class="text-center"> Year : {{car.yearMake}}   </p>
                     </div>
-        
           </div>
         </div>
     </div>
 </div>
+ 

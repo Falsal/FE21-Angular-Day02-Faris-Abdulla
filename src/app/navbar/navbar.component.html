@@ -1,49 +1,46 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-    <div class="container-fluid">
-  
-      <!-- <a class="navbar-brand" routerLink="/">{{projectName}}</a> -->
-  
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-  
-        <span class="navbar-toggler-icon"></span>
-  
-      </button>
-  
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-  
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-  
-          <li class="nav-item">
-  
-            <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
-  
-          </li>
-          <li class="nav-item">
-  
-            <a class="nav-link active" aria-current="page" routerLink="form">Contact us</a>
-  
-          </li>
-  
-          <li class="nav-item">
-  
-            <a  (click)="countClick()" class="nav-link" >Donate €10 </a>
-  
-          </li>
+  <div class="container-fluid">
 
-        </ul>
-  
-  
-       </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-       <div id="donate">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-        <ng-template [ngIf]="clickCounter >= 200" >
-            <p>You have reached VIP level</p>
-        </ng-template>   
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-       </div>
-  
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="form">Contact us</a>
+        </li>
+
+      </ul>
+
+
     </div>
-  
-  </nav>
+ 
+
+    <!-- <li class="nav-item">
+    </li> -->
+
+    <div class="row" >
+      <a (click)="countClick()" [style.display]=" clickCounter >=50 ? 'none' : null " class=" text-light nav-link active">Donate €10 </a> 
+    
+      <ng-template [ngIf]="clickCounter < 50" [ngElseIf]="vip">
+        <a class="nav-link active "> Total € {{clickCounter}} </a>
+      </ng-template>
+      
+      <div id="donate" class="text-warning">
+        <ng-template #vip [ngIf]="clickCounter >= 50">
+          <p>You have reached VIP level</p>
+        </ng-template>
+      </div>
+    </div>
+
+  </div>
+
+</nav>

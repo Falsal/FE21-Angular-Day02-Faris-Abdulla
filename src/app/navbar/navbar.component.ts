@@ -11,9 +11,7 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   countClick(){
-  
     this.clickCounter +=10;
-    console.log(this.clickCounter)
 }
   ngOnInit(): void {
   }
